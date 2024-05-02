@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos de moi </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        
+            color: #00abf0;
+        }
+      
+        h1 {
+            margin-top: 0;
+        }
+        main {
+            background: linear-gradient(to bottom right,#0fe5da, #1ccd3c,#f6f6f2,#05487c); 
+ 
+            padding: 10px;
+            text-align: center;
+        }
+        footer {
+            background-color: #081b29;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .circle {
+    position: relative;
+}
+
+
+.circle-lien {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #00abf0;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    text-decoration: none;
+   
+}
+
+
+.texte-survol {
+    border: 3px solid #130314;
+    border-radius: 5%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    text-align: center;
+   color:#1a0318;
+}
+
+.circle-lien:hover + .texte-survol {
+    display: block;
+}
+.btn-box{
+            display: flex;
+            justify-content: space-between;
+            width: 345px;
+            height: 50px;
+            
+        }
+        .btn-box a{
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 145px;
+            height: 50px;
+            background:#081b29;
+            border: 2px solid #1f0424;
+            border-radius: 8px;
+            font-size: 19px;
+            color: #f4edf4;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            z-index:1;
+            overflow: hidden;
+            transition: 5s;
+        }
+        .btn-box a:hover{
+            background-color: #1a0318;
+        }
+        .btn-box a:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #081b29;
+            z-index: -1;
+            transition: 5s;
+        }
+        .btn-box a:hover::before{
+            width: 100%;
+            
+
+        }
+ p{
+
+    color: rgb(25, 1, 31);
+    font-weight: bold;
+ }
+
+    </style>
+</head>
+<body>
+    
+  
+    <div class="btn-box">
+        <a href="index3.html">Acceil</a>
+       
+    </div>
+ 
+    <main>
+        <p>Bienvenue sur ma page de presentation  !</p>
+        <p>J'ai presente mes formations dans les cercles ci-dessous, mettant en lumiere mon parcours educatif et professionnel.<br> Chaque cercle represente une etape importante de mon developpement academique et de mes competences. <br>
+            Les annees indiquees refletent les periodes durant lesquelles j'ai suivi ces formations, demontrant ainsi la progression de mon apprentissage au fil du temps.</p>
+      
+
+
+
+            <div class="circle">
+                <a class="circle-lien" href="#" style="background-color: #70e845;">Competence </a>
+                <div class="texte-survol">Competence informatique <br><br>
+                    1.Microsoft 365 <br>
+                    2.logiciel (GLPI,PACKET TRACERT,TEAMS  VIEWER)<br>
+                    3.Realisation des cle bootable Win 10<br>
+                    4.Decouverte HTML CSS JAVASCRIPT<br>
+                    5.Githup
+                    1.Demontage er Remontage d'unite centrale de PC Pc portable<br>
+                    2.Creation d'un reseau inforamtique sur packet tracert<br>
+                    3.installation de os window sur poste clients<br>
+                    4.creation d'un site simple en html css et javascript<br>
+                    5.telecharger installer et exploiter la virtualisation avec os window linux android
+              
+                     </div>
+      
+        <div class="circle">
+            <a class="circle-lien" href="#" style="background-color: #a8e686;">2024</a>
+            <div class="texte-survol">Reinscrition en formation devellopement web a la Cci<br><br>
+                <span style="color: rgb(231, 237, 240);">Pour mon mois de remise a niveau en a decouvert: </span></span><br>
+                1.creation d'un tableau de calcul avec javascript <br>
+                2.le language de balisage  html et css (float grid layout )<br>
+                3.la shematisation de base de donne <br>
+            </div></div>
+                
+        </div>
+        
+        <div class="circle">
+            <a class="circle-lien" href="#" style="background-color: #8ad893;">2023</a>
+            <div class="texte-survol">Formation Technicienne Helpdesk(EDIL)<br><br>
+                1.Le hardware <br>
+                2.decouverte des logiciel (GLPI,PACKET TRACERT)<br>
+                3.Decouverte de la virtualisation (ORACL VIRTUAL BOX , VMWARE )<br>
+                4.Decouverte du Reseau informatique <br>
+                5.utilisation microsoft 365
+               
+                 </div>
+            
+        </div>
+
+        <div class="circle">
+            <a class="circle-lien" href="#" style="background-color: #67c885;">2020</a>
+            <div class="texte-survol">Premiere inscription en formation developpement web Cci<br><br>
+            1. les base du html et du css <br>
+            2.configurer son environement de travaille <br>
+            3.Decouverte de la console de debogage <br>
+        4.creation en equipe du jeux snake en javascript </div>
+        </div>
+
+        <div class="circle">
+            <a class="circle-lien" href="#" style="background-color: #203820;">2016</a>
+            <div class="texte-survol">Maintenance informatique de proximite</div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sylvie alternante Cci noumea NC  - Un projet </p>
+    </footer>
+</body>
+</html>
+

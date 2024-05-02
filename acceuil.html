@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation de texte en cascade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  /* Styles existants */
+
+body {
+  background: linear-gradient(to bottom right,#0fe5da, #1ccd3c,#f6f6f2,#05487c); 
+ 
+   padding: 0;
+    overflow: hidden;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+main {
+    flex: 1;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* CSS modifié */
+
+.petale {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #e6edf2, #e0ce0a);
+    animation: tomber 5s linear infinite;
+    color: azure;
+    top: -50px; /* Commence en haut de la page */
+}
+
+@keyframes tomber {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+}
+main {
+    position: relative; /* Assure que les titres sont positionnés par rapport à la section principale */
+}
+
+    
+    
+    .navbar a {
+        border: 2px solid #00abf0;
+        border-radius: 15px;
+        font-size: 25px;
+        color: #ededed;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 35px;
+        transition: 3s;
+    }
+    .navbar a:hover,
+    .navbar a.active{
+
+        color: #00abf0;
+
+    }
+h1 {
+    position: absolute; /* Les positionne de manière absolue par rapport à la section principale */
+    top: 20px; /* Ajuste la position verticale du premier titre */
+    left: 50%; /* Centre le titre horizontalement */
+    transform: translateX(-50%); /* Centre le titre horizontalement */
+    text-align: center; /* Centre le texte horizontalement */
+    font-size: 28px; /* Taille du texte */
+    color: #fff; /* Couleur du texte */
+}
+
+h1:last-child {
+    top: 80px; /* Ajuste la position verticale du deuxième titre */
+}
+
+.presentation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #59a3b6;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.text {
+    opacity: 0;
+    font-size: 24px;
+    animation: fallDown 12.5s forwards;
+    background: linear-gradient(to bottom right, #3498db, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes fallDown {
+    to {
+        opacity: 1;
+    }
+}
+
+.monLien {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+.monLien a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 145px;
+    height: 50px;
+    background: #081b29;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #00abf0;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 5s;
+}
+
+.monLien a:hover {
+    background-color: #00abf0;
+}
+
+
+
+
+</style>
+<body>
+    <header>
+      <a href="#" class="logo"></a>
+    </header>
+    <main id="main-content">
+        <div id="petale-container"></div>
+
+        <h1>Je vous Remercie d'avoir consulter ma age </h1>
+       
+       
+        <div id="monContenu">
+            <div class="presentation">
+                <div class="text">La vraie question de mon site</div>
+                <div class="text">Bonjour, je suis Sylvie, future alternante. J'ai eu la chance d'avoir été acceptée pour intégrer la CCI de Nouméa dans la formation développement web.</div>
+                <div class="text">Cependant, afin de poursuivre cette formation, il est nécessaire que je trouve une entreprise d'insertion.</div>
+                <div class="text">Actuellement, je suis activement à la recherche d'une entreprise d'alternance qui me permettra de continuer ma formation et d'acquérir une expérience professionnelle auprès de professionnels du secteur.</div><br>
+                <div class="text"> cliquez sur le bouton pour retourner a l'acceuil</div>
+                <div class="monLien">
+                    <a href="moi.html">Cliquez ici</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="thought">"L'innovation distingue un leader d'un suiveur." - Steve Jobs</p>
+    </footer>
+    <script lang="javascript">
+document.addEventListener("DOMContentLoaded", function () {
+    const petaleContainer = document.getElementById("petale-container");
+    const numPetals = 12; // Nombre de bulles
+
+    // Générer les bulles
+    for (let i = 0; i < numPetals; i++) {
+        const petale = document.createElement("div");
+        petale.classList.add("petale");
+        petale.style.left = `${Math.random() * 100}%`; // Position aléatoire en haut de la page
+        petale.style.animationDelay = `${Math.random() * 5}s`; // Délai d'animation aléatoire
+        petaleContainer.appendChild(petale);
+    }
+});
+
+
+    </script>
+</body>
+</html>
